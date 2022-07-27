@@ -59,6 +59,7 @@ html {
     background-color: hsl(0, 0%, 8%);
     padding: 15px 30px;
     border-radius: 13px;
+    border:2px solid transparent;
 }
 
 .hero .clients {
@@ -285,7 +286,7 @@ a:hover{
     color:hsl(0, 0%, 8%);
 }
 
-.btn:hover,.bt:hover{
+.hero .btn:hover,header .drop-menu .buttons:hover{
     background-color:transparent;
     color:hsl(0, 0%, 8%);
     border: 2px solid hsl(0, 0%, 8%);

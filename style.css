@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Epilogue', sans-serif;
+}
+
+body,
+html {
+    overflow-x: hidden;
+}
+
+.hero {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero .img {
+    margin-top: 80px;
+    margin-bottom: 60px;
+    width: 100vw;
+    height: 300px;
+    background: url(images/image-hero-mobile.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.hero .txt {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.hero .txt h1 {
+    font-size: 37px;
+    font-weight: 700;
+}
+
+.hero .txt p {
+    color: hsl(0, 0%, 41%);
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+.hero .btn {
+    color: white;
+    text-decoration: none;
+    background-color: hsl(0, 0%, 8%);
+    padding: 15px 30px;
+    border-radius: 13px;
+}
+
+.hero .clients {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero .clients img {
+    width: 80px;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+}
+
+header .menu {
+    width: 40px;
+    height: 40px;
+    background: url(images/icon-menu.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1000;
+}
+
+header .menu.menuClicked {
+    background: url(images/icon-close-menu.svg);
+    background-repeat: no-repeat;
+}
+
+header .drop-menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: white;
+    height: 100vh;
+    width: 70vw;
+    z-index: 3;
+    padding: 30px;
+    padding-top: 60px;
+    display: none;
+}
+
+header .drop-menu.droped {
+    display: block;
+}
+
+header .drop-menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+header .drop-menu ul li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header .drop-menu ul a {
+    text-decoration: none;
+    color: hsl(0, 0%, 41%);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+header .drop-menu .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+header .drop-menu .buttons a {
+    color: hsl(0, 0%, 41%);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+header .drop-menu .buttons .bt {
+    border: 2px solid hsl(0, 0%, 41%);
+    border-radius: 15px;
+    padding: 15px 60px;
+}
+
+.cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(2, 2, 2, .5);
+    display: none;
+}
+
+.cover.coverShow {
+    display: block;
+}
+
+header ul li.sec {
+    display: none;
+    margin-left: 20px;
+}
+
+header ul li.sec1 {
+    display: block;
+}
+
+.arrow {
+    background: url(images/icon-arrow-down.svg);
+    height: 10px;
+    width: 10px;
+    background-repeat: no-repeat;
+}
+
+.arrow1.arrowClicked {
+    background: url(images/icon-arrow-up.svg);
+    background-repeat: no-repeat;
+}
+
+.arrow.arrowClicked {
+    background: url(images/icon-arrow-up.svg);
+    background-repeat: no-repeat;
+}
+
+.arrow1 {
+    background: url(images/icon-arrow-down.svg);
+    height: 10px;
+    width: 10px;
+    background-repeat: no-repeat;
+}
+
+header ul li.third {
+    display: none;
+    margin-left: 20px;
+}
+
+header ul li.third img {
+    margin-right: 20px;
+}
+
+header ul li.third.sec1 {
+    display: block;
+}
+
+@media (min-width:1211px) {
+    .hero {
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .hero .clients {
+        position: absolute;
+        top: 700px;
+        left: 100px;
+        gap: 40px;
+    }
+    .hero .txt {
+        width: 40%;
+        text-align: left;
+        align-items: flex-start;
+    }
+    .hero .txt h1 {
+        font-size: 10vmin;
+    }
+    .hero .img {
+        width: 40%;
+        height: 600px;
+        background-image: url(images/image-hero-desktop.png);
+        background-size: contain;
+    }
+    header .menu {
+        display: none;
+    }
+    header .drop-menu {
+        display: flex;
+        position: relative;
+        height: fit-content;
+        width: fit-content;
+        background: transparent;
+        padding: 0;
+    }
+    header .drop-menu>ul {
+        flex-direction: row;
+        gap: 30px;
+        margin-bottom: 0;
+    }
+    header .drop-menu .buttons {
+        flex-direction: row;
+        margin-left: 400px;
+    }
+    header .drop-menu .buttons .bt {
+        padding: 15px 35px;
+    }
+    header .third,
+    header .sec {
+        position: absolute;
+        top: 80px;
+        left: -100px;
+        background-color: white;
+        box-shadow: 0px 12px 12px rgba(2, 2, 2, .1);
+        padding: 20px;
+        border-radius: 15px;
+    }
+    header .sec {
+        left: 100px;
+    }
+}

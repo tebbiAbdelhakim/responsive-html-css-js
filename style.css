@@ -280,3 +280,13 @@ header ul li.third.sec1 {
         left: 100px;
     }
 }
+
+a:hover{
+    color:hsl(0, 0%, 8%);
+}
+
+.btn:hover,.bt:hover{
+    background-color:transparent;
+    color:hsl(0, 0%, 8%);
+    border: 2px solid hsl(0, 0%, 8%);
+}
